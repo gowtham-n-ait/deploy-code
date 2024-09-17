@@ -1,3 +1,4 @@
 #!/bin/bash
-rm -rf /opt/nodejs/PCAI-Frontend
-mkdir -p /opt/nodejs/PCAI-Frontend
+
+# deleting the content of test directory
+rm -rf /opt/sample/test/*
