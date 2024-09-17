@@ -29,7 +29,7 @@ jobs:
         run: npm run build
 
       - name: Zip the build
-        run: zip -r build.zip appspec.yml build
+        run: zip -r build.zip build
 
       - name: Upload artifact
         uses: actions/upload-artifact@v3
@@ -63,7 +63,7 @@ jobs:
           aws-region: us-east-1
 
       - name: Push build to S3
-        run: aws deploy push --application-name dev-mytickets --s3-location s3://sample-bucket-3231/staging-build.zip --region us-east-1
+        run: aws deploy push --application-name dev-mytickets --s3-location s3://sample-bucket-3231/staging-build.zip --region us-east-1 --source .
 
       - name: Create CodeDeploy Deployment
         run: |
