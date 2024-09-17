@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /home/ubuntu/test/
+    destination: /home/ubuntu/test
 hooks:
   BeforeInstall:
     - location: before-install.sh
