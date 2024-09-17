@@ -37,11 +37,6 @@ jobs:
           name: build.zip
           path: build.zip
 
-  deploy:
-    name: Staging Deploy
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
       - name: Download build artifact
         uses: actions/download-artifact@v3
         with:
@@ -63,7 +58,7 @@ jobs:
           aws-region: us-east-1
 
       - name: Push build to S3
-        run: aws deploy push --application-name dev-mytickets --s3-location s3://sample-bucket-3231/staging-build.zip --region us-east-1 --source .
+        run: aws deploy push --application-name dev-mytickets --s3-location s3://sample-bucket-3231/staging-build.zip --region us-east-1
 
       - name: Create CodeDeploy Deployment
         run: |
