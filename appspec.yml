@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /opt/nodejs/PCAI-Frontend
+    destination: /home/ubuntu/test
 
 #  BeforeInstall:
 #    - location: before-install.sh
