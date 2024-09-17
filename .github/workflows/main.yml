@@ -61,7 +61,7 @@ jobs:
         run: |
           aws deploy create-deployment \
             --application-name dev-mytickets \
-            --s3-location bucket=sample-bucket-3231,key=staging-build.zip,bundleType=zip \
+            --s3-location bucket=sample-bucket-3231,key=build.zip,bundleType=zip \
             --deployment-group-name pcai-frontend \
             --deployment-config-name CodeDeployDefault.AllAtOnce
     
