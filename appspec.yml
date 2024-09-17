@@ -4,15 +4,15 @@ files:
   - source: /
     destination: /opt/nodejs/PCAI-Frontend
 
-  BeforeInstall:
-    - location: before-install.sh
-      timeout: 300
-      runas: root
+#  BeforeInstall:
+#    - location: before-install.sh
+#      timeout: 300
+#      runas: root
 
-  AfterInstall:
-   - location: permissions.sh
-      timeout: 300
-      runas: root
+#  AfterInstall:
+#   - location: permissions.sh
+#      timeout: 300
+#      runas: root
 
   ApplicationStart:
     - location: server_start.sh
