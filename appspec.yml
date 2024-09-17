@@ -7,12 +7,12 @@ hooks:
   BeforeInstall:
     - location: before-install.sh
       timeout: 300
-      runas: dev
+      runas: root
   AfterInstall:
     - location: permissions.sh
       timeout: 300
-      runas: dev
+      runas: root
   ApplicationStart:
     - location: server_start.sh
       timeout: 300
-      runas: dev
+      runas: root
