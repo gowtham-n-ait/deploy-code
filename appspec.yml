@@ -1,18 +1,18 @@
 version: 0.0
 os: linux
 files:
-  - source: /index.html
-    destination: /home/ubuntu/test
+ - source: /index.html
+   destination: /home/ubuntu/test
 
-#  BeforeInstall:
-#    - location: before-install.sh
-#      timeout: 300
-#      runas: root
+  BeforeInstall:
+    - location: before-install.sh
+      timeout: 300
+      runas: root
 
-#  AfterInstall:
-#   - location: permissions.sh
-#      timeout: 300
-#      runas: root
+  AfterInstall:
+   - location: permissions.sh
+      timeout: 300
+      runas: root
 
   ApplicationStart:
     - location: server_start.sh
