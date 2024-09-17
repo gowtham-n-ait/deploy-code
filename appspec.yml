@@ -2,7 +2,7 @@
 version: 0
 os: linux
 files:
-  - source: .
+  - source: /
     destination: /home/ubuntu/test
 hooks:
   BeforeInstall:
