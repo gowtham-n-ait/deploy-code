@@ -1,0 +1,17 @@
+version: 0.0
+os: linux
+files:
+  - source: .
+    destination: /opt/nodejs/PCAI-Frontend
+  BeforeInstall:
+    - location: awsdeploy/before-install.sh
+      timeout: 300
+      runas: root
+  AfterInstall:
+   - location: awsdeploy/permissions.sh
+      timeout: 300
+      runas: root
+  ApplicationStart:
+    - location: awsdeploy/server_start.sh
+      timeout: 300
+      runas: root
