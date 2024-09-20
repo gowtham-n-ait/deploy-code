@@ -3,7 +3,7 @@ name: Staging deployment
 on:
   push:
     branches:
-      - development
+      - staging
 
 jobs:
   build:
@@ -56,7 +56,7 @@ jobs:
 
       - name: Push build to S3
         run: |
-          aws deploy push --application-name dev-mytickets \
+          aws deploy push --application-name staging-app \
           --s3-location s3://sample-bucket-3231/staging-build.zip \
           --region us-east-1
 
