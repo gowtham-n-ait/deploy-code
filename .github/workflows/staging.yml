@@ -57,13 +57,13 @@ jobs:
       - name: Push build to S3
         run: |
           aws deploy push --application-name staging-app \
-          --s3-location s3://sample-bucket-3231/staging-build.zip \
+          --s3-location s3://sample-bucket-3231/staging/staging-build.zip \
           --region us-east-1
 
       - name: Create CodeDeploy Deployment
         run: |
           aws deploy create-deployment \
             --application-name staging-app \
-            --s3-location bucket=sample-bucket-3231,key=staging-build.zip,bundleType=zip \
+            --s3-location bucket=sample-bucket-3231,key=staging/staging-build.zip,bundleType=zip \
             --deployment-group-name staging-app-grp \
             --deployment-config-name CodeDeployDefault.AllAtOnce
