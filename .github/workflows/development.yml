@@ -57,7 +57,6 @@ jobs:
       - name: Push build to S3
         run: |
           aws deploy push --application-name dev-app \
-          --source build \
           --s3-location s3://sample-bucket-3231/development/development-build.zip \
           --region us-east-1
 
